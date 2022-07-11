@@ -5,6 +5,7 @@
             --color: rgb(rgba(251, 255, 0));
             accent-color: yellow;
             /* accent-color: deeppink; */
+            user-select: none;
         }
 
         .slider{
