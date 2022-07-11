@@ -35,8 +35,8 @@
             background-size: cover;
             /* width: calc(var(--face-size));
     height: calc(var(--face-size)); */
-            min-width: calc(var(--face-size)*0.5);
-            min-height: calc(var(--face-size)*0.5);
+            min-width: calc(var(--face-size)*0.1);
+            min-height: calc(var(--face-size)*0.1);
             width: var(--face-size);
             height: var(--face-size);
             max-width: 40vw;
