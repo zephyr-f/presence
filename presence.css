@@ -5,19 +5,21 @@
             --color: rgb(rgba(251, 255, 0));
             accent-color: yellow;
             /* accent-color: deeppink; */
+        }
+        body {
+            overflow: hidden;
             user-select: none;
         }
 
         .slider{
             display: flex;
             flex-wrap: wrap;
-            colo
         }
 
         #kids-container {
             display: flex;
             flex-wrap: wrap;
-            width: 90vw;
+            width: 100vw;
             /* height: 900vh; */
             gap: 1rem;
         }
@@ -37,8 +39,8 @@
             min-height: calc(var(--face-size)*0.5);
             width: var(--face-size);
             height: var(--face-size);
-            max-width: var(--face-size*2);
-            max-height: var(--face-size*2);
+            max-width: 40vw;
+            max-height: 40;
             border-radius: 50%;
             /* clip-path: fill-box; */
             /* clip-path: circle(77%); */
