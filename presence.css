@@ -1,6 +1,6 @@
 
         :root {
-            --face-size: 200px;
+            --face-size: 100px;
             font: 30px sans-serif;
             --color: rgb(rgba(251, 255, 0));
             accent-color: yellow;
@@ -37,10 +37,10 @@
     height: calc(var(--face-size)); */
             min-width: calc(var(--face-size)*0.1);
             min-height: calc(var(--face-size)*0.1);
-            width: var(--face-size);
-            height: var(--face-size);
+            width: calc(var(--face-size)+5rem);
+            height: calc(var(--face-size)+5rem);
             max-width: 40vw;
-            max-height: 40;
+            max-height: 40vw;
             border-radius: 50%;
             /* clip-path: fill-box; */
             /* clip-path: circle(77%); */
