@@ -1,13 +1,23 @@
 
         :root {
-            --face-size: 100px;
+            --face-size: 200px;
+            font: 30px sans-serif;
+            --color: rgb(rgba(251, 255, 0));
+            accent-color: yellow;
+            /* accent-color: deeppink; */
+        }
+
+        .slider{
+            display: flex;
+            flex-wrap: wrap;
+            colo
         }
 
         #kids-container {
             display: flex;
             flex-wrap: wrap;
-            width: 100vw;
-            height: 100vh;
+            width: 90vw;
+            /* height: 900vh; */
             gap: 1rem;
         }
 
@@ -31,15 +41,15 @@
             border-radius: 50%;
             /* clip-path: fill-box; */
             /* clip-path: circle(77%); */
-            box-shadow: 0 0 0 0.7rem rgba(251, 255, 0, 0.5) inset;
+            box-shadow: 0 0 0 1rem rgba(251, 255, 0, 0.5) inset;
             transition: box-shadow 0.3s ease-in-out;
         }
 
-        .kid-card-BG:active {
+        /* .kid-card-BG:active {
             box-shadow: 0 0 0 1rem rgba(251, 255, 0, 0.5) inset;
-        }
+        } */
         .kid-card-BG_checked {
-            box-shadow: 0 0 0 3rem rgba(13, 255, 0, 0.5) inset;
+            box-shadow: 0 0 0 5rem rgba(13, 255, 0, 0.5) inset;
         }
 
         .name-contain {
@@ -50,8 +60,7 @@
             /* left: 50%;
     transform: translate(-50%, 0); */
             width: 100%;
-            padding: 0.7rem;
-            font: 0.7rem sans-serif;
+            padding: 1rem;
             text-shadow: 0px 0px 3px #000000;
             background-color: transparent !important;
         }
@@ -62,9 +71,9 @@
             /* width: 100%; */
             /* direction: rtl; */
             text-align: center;
-            /* font: 1rem sans-serif; */
-            text-shadow: black 0 0 0.2rem, black 0 0 0.7rem;
-            transform-origin: center top;
+            font-size: 1rem;
+            text-shadow: black 0 0 0.2rem, black 0 0 1rem;
+            /* transform-origin: center top; */
             /* background-color: yellow; */
         }
 

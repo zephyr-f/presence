@@ -1,5 +1,13 @@
 console.log('presence.js works! :)');
 
+const sliderImages = document.getElementById('sliderImages');
+// const faceSize = document.documentElement
+// faceSize.style.setProperty(--face-size, slider.value);
+
+sliderImages.oninput = function () {
+  output.innerHTML = this.value;
+};
+
 const group = {
   kids: {
     1: {
