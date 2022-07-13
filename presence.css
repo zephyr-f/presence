@@ -37,8 +37,8 @@
             min-height: 10vw;
             width: var(--face-size);
             height: var(--face-size);
-            max-width: 90vw;
-            max-height: 90vw;
+            max-width: 40vw;
+            max-height: 40vw;
             border-radius: 50%;
             /* clip-path: fill-box; */
             /* clip-path: circle(77%); */
