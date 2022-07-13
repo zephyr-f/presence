@@ -1,8 +1,8 @@
 
         :root {
-            --face-size: 100px;
+            --face-size: 200px;
             font: 30px sans-serif;
-            --color: rgb(rgba(251, 255, 0));
+            /* --color: rgb(rgba(251, 255, 0)); */
             accent-color: yellow;
             /* accent-color: deeppink; */
         }
@@ -37,8 +37,8 @@
     height: calc(var(--face-size)); */
             min-width: calc(var(--face-size)*0.1);
             min-height: calc(var(--face-size)*0.1);
-            width: calc(var(--face-size)+22vw);
-            height: calc(var(--face-size)+22vw);
+            width: var(--face-size);
+            height: var(--face-size);
             max-width: 40vw;
             max-height: 40vw;
             border-radius: 50%;
