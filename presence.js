@@ -41,7 +41,7 @@ let kidsContainer = document.getElementById('kids-container');
 for (let i in group.kids) {
   const kid = group.kids[i];
   kidsContainer.innerHTML += `<div id="${i}" class="kid-card-BG" style="background-image: url('${kid.image}')"
-ontouchstart="kidTouch(this)" onclick="kidTouch(this)">
+ontouchend="kidTouch(this)" onclick="kidTouch(this)">
 <div class="name-contain">
 <p class="name-in-frame">${kid.fname}<br>${kid.lname}</p>
 </div>
