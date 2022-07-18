@@ -11,7 +11,7 @@ sliderImages.oninput = function () {
 async function getGroupStatus() {
   const options = {
     method: 'GET',
-    url: 'https://hook.us1.make.com/uq4x35bqois6uwwsk1fyxk37x7re6160',
+    url: 'https://hook.eu1.make.com/sjdlg64p5tpij9m2awkts87rn56g3qu6',
     headers: { 'content-type': 'application/json' },
   };
   await axios
@@ -28,12 +28,13 @@ async function getGroupStatus() {
   for (let i in group) {
     const kid = group[i].kid;
     console.log(kid);
+    console.log(kid.kidDetails);
     kidsContainer.innerHTML +=
-      `<div id="${kidNum}" class="kid-card-BG" style="background:  #a8ff78 url('${kid.image}')"` +
+      `<div id="${kid.kidDetails.kidNum}" class="kid-card-BG" style="background:  #a8ff78 url('${kid.kidDetails.image}')"` +
       // ontouchend="kidTouch(this)"
       `onclick="kidTouch(this)">
 <div class="name-contain">
-<p class="name-in-frame">${kid.fname}<br>${kid.lname}</p>
+<p class="name-in-frame">${kid.kidDetails.fname}<br>${kid.kidDetails.lname}</p>
 </div>
 </div>`;
   }
@@ -47,7 +48,7 @@ function kidTouch(kidCard) {
   const isChecked = kidCard.classList.contains('kid-card-BG_checked');
   console.log(isChecked);
 
-  axios.post('https://hook.us1.make.com/uq4x35bqois6uwwsk1fyxk37x7re6160', {
+  axios.post('https://hook.eu1.make.com/sjdlg64p5tpij9m2awkts87rn56g3qu6', {
     kidNum: kidCard.id,
     checked: isChecked,
   });
