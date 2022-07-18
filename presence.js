@@ -27,11 +27,11 @@ async function getGroupStatus() {
 
   for (let i in group) {
     const kid = group[i].kid;
-    console.log(kid);
-    console.log(kid.kidDetails);
+    console.log(i, kid);
+    const gotCheck =
+      kid.kidDetails.checked == true ? 'kid-card-BG_checked' : '';
     kidsContainer.innerHTML +=
-      `<div id="${kid.kidDetails.kidNum}" class="kid-card-BG" style="background:  #a8ff78 url('${kid.kidDetails.image}')"` +
-      // ontouchend="kidTouch(this)"
+      `<div id="${kid.kidNum}" class="kid-card-BG ${gotCheck}" style="background:  #a8ff78 url('${kid.kidDetails.image}')"` +
       `onclick="kidTouch(this)">
 <div class="name-contain">
 <p class="name-in-frame">${kid.kidDetails.fname}<br>${kid.kidDetails.lname}</p>
