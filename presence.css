@@ -33,8 +33,10 @@
             display: flex;
             /* flex-basis:fit-content; */
             background-size: cover;
-            min-width: 10vw;
-            min-height: 10vw;
+            background-position: center;
+            background-color: #a8ff78;
+            min-width: 20vw;
+            min-height: 20vw;
             width: var(--face-size);
             height: var(--face-size);
             max-width: 40vw;
@@ -42,7 +44,7 @@
             border-radius: 50%;
             /* clip-path: fill-box; */
             /* clip-path: circle(77%); */
-            box-shadow: 0 0 0 0.5rem rgba(251, 255, 0, 0.5) inset;
+            /* box-shadow: 0 0 0 0.3rem rgba(251, 255, 0, 0.5) inset; */
             transition: box-shadow 0.3s ease-in-out;
         }
 
@@ -57,6 +59,7 @@
             align-self: center;
             position: relative;
             display: inline-block;
+            overflow: hidden;
             /* bottom: 0; */
             /* left: 50%;
     transform: translate(-50%, 0); */
@@ -72,8 +75,9 @@
             /* width: 100%; */
             /* direction: rtl; */
             text-align: center;
-            font-size: 1rem;
+            font-size: clamp(1pt, 1rem, 90%);
             text-shadow: black 0 0 0.2rem, black 0 0 1rem;
+            /* overflow: clip; */
             /* transform-origin: center top; */
             /* background-color: yellow; */
         }
