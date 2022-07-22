@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>נוכחות - הגעת ילדים לגן</title>
-    <meta property="og:image" content="images\sys images\medium-shot-kids-sitting-together-table.jpg"> -->
-    <link rel="icon" href="playtime.png" type="image/x-icon">
+    <link rel="icon" href="images/sys images/playtime.png" type="image/x-icon">
     <link rel="stylesheet" href="presence.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+    </style>
 
     <!-- HTML Meta Tags -->
     <title>נוכחות - הגעת ילדים לגן</title>
@@ -35,30 +36,24 @@
 
 </head>
 
-<body dir="auto" style="font: sans-serif" ;>
+<body dir="auto">
     <div class="slider">
         <div>
             <label for="sliderImages">הגדלת תמונות</label>
-            <input type="range" id="sliderImages">
+            <input type="range" id="sliderImages" oninput="scaleImage(this.value)">
         </div>
         <div>
             <label for="sliderText">הגדלת כתב</label>
-            <input type="range" id="sliderText">
+            <input type="range" id="sliderText" oninput="scaleText(this)">
         </div>
     </div>
-    <h1> סימון נוכחות</h1>
-    <h2> גן לדוגמא</h2>
+    <div class="headlines">
+        <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
+    </div>
     <div id="kids-container">
-
-        <div class="kid-card-BG" style="background-image: url('download(6).jfif')">
-            <div class="name-contain">
-                <p class="name-in-frame">יובל<br>פורשר</p>
-            </div>
-        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="presence.js"></script>
-    <!-- <script></script> -->
     <!-- <script src="circularText.js"></script> -->
 
 </body>

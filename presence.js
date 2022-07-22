@@ -1,12 +1,8 @@
 console.log('presence.js works! :)');
 
-const sliderImages = document.getElementById('sliderImages');
+// const sliderImages = document.getElementById('sliderImages');
 // const faceSize = document.documentElement
 // faceSize.style.setProperty(--face-size, slider.value);
-
-sliderImages.oninput = function () {
-  output.innerHTML = this.value;
-};
 
 async function getGroupStatus() {
   const options = {
@@ -43,7 +39,6 @@ getGroupStatus();
 
 function kidTouch(kidCard) {
   console.log(kidCard);
-  // alert(kidCard.id);
   kidCard.classList.toggle('kid-card-BG_checked');
   const isChecked = kidCard.classList.contains('kid-card-BG_checked');
   console.log(isChecked);
@@ -57,3 +52,6 @@ function kidTouch(kidCard) {
 //   document
 //     .getElementById(`kid${kidNum}`)
 //     .addEventListener('touch', myFunction(kidNum));}
+scaleImage = sliderInput => {
+  document.documentElement.style.setProperty('--face-size', sliderInput);
+};
