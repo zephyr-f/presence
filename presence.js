@@ -53,5 +53,8 @@ function kidTouch(kidCard) {
 //     .getElementById(`kid${kidNum}`)
 //     .addEventListener('touch', myFunction(kidNum));}
 scaleImage = sliderInput => {
-  document.documentElement.style.setProperty('--face-size', sliderInput);
+  document.body.style.setProperty('--face-size', sliderInput + 'px');
+};
+scaleText = sliderInput => {
+  document.body.style.setProperty('font-size', sliderInput + 'em');
 };

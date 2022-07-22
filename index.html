@@ -37,14 +37,16 @@
 </head>
 
 <body dir="auto">
-    <div class="slider">
-        <div>
-            <label for="sliderImages">הגדלת תמונות</label>
-            <input type="range" id="sliderImages" oninput="scaleImage(this.value)">
-        </div>
-        <div>
-            <label for="sliderText">הגדלת כתב</label>
-            <input type="range" id="sliderText" oninput="scaleText(this)">
+    <div class="appSettings">
+        <div class="slider">
+            <div>
+                <input type="range" id="sliderText" min="1" max="3" oninput="scaleText(this.value)">
+                <label for="sliderText">הגדלת כתב</label>
+            </div>
+            <div>
+                <input type="range" id="sliderImages" min="50" max="300" oninput="scaleImage(this.value)">
+                <label for="sliderImages">הגדלת תמונות</label>
+            </div>
         </div>
     </div>
     <div class="headlines">
