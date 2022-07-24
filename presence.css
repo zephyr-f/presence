@@ -36,8 +36,8 @@
         #kids-container {
             display: flex;
             flex-wrap: wrap;
-            width: 100vw;
-            /* height: 900vh; */
+            /* width: 100vw; */
+            justify-content: space-evenly;
             gap:  1rem;
         }
 
@@ -66,7 +66,7 @@
             align-self: center;
             position: relative;
             display: inline-block;
-            overflow: hidden;
+            /* overflow: hidden; */
             width: 100%;
             /* padding: calc(var(--face-size) / 10); */
             background-color: transparent !important;
@@ -76,7 +76,7 @@
             color: white;
 
             text-align: center;
-            font-size: clamp(10px, 2em, 90%);
+            font-size: clamp(5px, 1em, 222px);
             font-weight: 300;
             text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem;
         }
