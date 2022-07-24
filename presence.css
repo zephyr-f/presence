@@ -1,6 +1,6 @@
 
         :root {
-            accent-color: yellow;
+            accent-color: DarkSlateBlue;
         }
         body {
             --face-size: 100px;
@@ -14,7 +14,7 @@
         .appSettings {
           font-size: 30px;
           line-height: 1em;
-          color: blue;
+          color: DarkSlateBlue;
         }
 
         .headlines{
@@ -28,7 +28,8 @@
         }
         .kindergartenName{
             /* display: inline-block; */
-            background-color: yellow;
+            color: white;
+            background-color: SlateBlue;
             border-radius: 0.5rem;
             padding: 0 0.3rem;
             /* border-spacing: 5rem; */
@@ -48,7 +49,9 @@
             display: flex;
             background-size: cover;
             background-position: center;
-            background-color: yellow;
+            background-color: Coral;
+            box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset;
+            backdrop-filter: brightness(0.5);
             min-width: 50px;
             min-height: 50px;
             width: var(--face-size);
