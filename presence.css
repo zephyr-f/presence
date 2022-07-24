@@ -53,8 +53,8 @@
             min-height: 50px;
             width: var(--face-size);
             height: var(--face-size);
-            max-width: 40vw;
-            max-height: 40vw;
+            max-width: 90vw;
+            max-height: 90vw;
             border-radius: 50%;
             overflow: hidden;
             transition: box-shadow 0.3s ease-in-out;
