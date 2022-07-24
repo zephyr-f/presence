@@ -3,7 +3,7 @@
             accent-color: yellow;
         }
         body {
-            --face-size: 150px;
+            --face-size: 100px;
             font: sans-serif;
             overflow-x: hidden;
             user-select: none;
