@@ -13,11 +13,13 @@
 
         .appSettings {
           font-size: 30px;
+          line-height: 1em;
           color: blue;
         }
 
         .headlines{
             font-size: 30px;
+            line-height: 1em;
         }
 
         .slider{
