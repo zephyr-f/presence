@@ -85,3 +85,6 @@
             font-weight: 300;
             text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem;
         }
+        .form{
+            font-size: 16pt;
+        }
