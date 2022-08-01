@@ -73,6 +73,7 @@
             border-radius: 5% 5% 0 0;
             min-width: 100%;
             width: var(--face-size);
+            max-width: 90vw;
             height: var(--face-size);
             background-size: cover;
             background-position: center;
