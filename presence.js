@@ -511,11 +511,12 @@ async function getGroupStatus() {
     const gotCheck =
       kid.kidDetails.checked == 'true' ? 'kid-card-BG_checked' : '';
     kidsContainer.innerHTML +=
-      `<div id="${kid.kidNum}" class="kid-card-BG ${gotCheck}" style="background-image: url('${kid.kidDetails.image}')"` +
+      `<div id="${kid.kidNum}" class="kid-card-BG ${gotCheck}"` +
       `onclick="kidTouch(this)">
-<div class="name-contain">
-<p class="name-in-frame">${kid.kidDetails.fname}<br>${kid.kidDetails.lname}</p>
-</div>
+      <div class="kid-image" style="background-image: url('${kid.kidDetails.image}')">
+      </div>
+      <div class="name-contain">
+<p class="name-in-frame">${kid.kidDetails.fname} ${kid.kidDetails.lname}</p>
 </div>`;
   }
 }
@@ -539,11 +540,11 @@ function kidTouch(kidCard) {
 scaleImage = sliderInput => {
   document.body.style.setProperty('--face-size', sliderInput + 'px');
 };
-scaleText = sliderInput => {
-  document.body.style.setProperty('font-size', sliderInput + 'em');
-  document.body.style.setProperty('line-height', 1 - 0.05 * sliderInput + 'em');
+let scaleText = sliderInput => {
+  document.body.style.setProperty('font-size', sliderInput * 90 + '%');
+  // document.body.style.setProperty('line-height', 1 - 0.05 * sliderInput + 'em');
   // document
   //   .getElementsByClassName('kid-card-BG')
   //   .style.setProperty('font-size', sliderInput + 'em');
 };
-scaleText(2);
+scaleText(1);

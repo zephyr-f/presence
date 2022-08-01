@@ -45,46 +45,60 @@
         }
 
         .kid-card-BG {
-            position: relative;
+            /* position: relative;
             display: flex;
-            background-size: cover;
-            background-position: center;
-            background-color: Coral;
-            box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset;
-            backdrop-filter: brightness(0.5);
+            flex-direction: column; */
+            /* align-content: space-around; */
+            /* justify-content: space-around; */
+            /* box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset; */
+            /* backdrop-filter: brightness(0.5); */
+            /* padding: 10%; */
             min-width: 50px;
             min-height: 50px;
-            width: var(--face-size);
-            height: var(--face-size);
             max-width: 90vw;
             max-height: 90vw;
-            border-radius: 50%;
+            border-radius: 5%;
             overflow: hidden;
-            transition: box-shadow 0.3s ease-in-out;
+            background-color: hsla(16, 100%, 40%, 0.7);
+            /* transition: box-shadow 0.3s ease-in-out; */
+            transition: background-color 0.3s ease-in-out;
         }
-
+        
         .kid-card-BG_checked {
-            box-shadow: 0 0 0 500px rgba(13, 255, 0, 0.5) inset;
+            background-color: hsla(117, 100%, 40%, 0.7);
+            /* box-shadow: 0 0 0 500px hsla(117, 100%, 50%, 0.5) inset; */
+        }
+        
+        .kid-image{
+            border-radius: 5% 5% 0 0;
+            min-width: 100%;
+            width: var(--face-size);
+            height: var(--face-size);
+            background-size: cover;
+            background-position: center;
+            /* background-color: Coral; */
         }
 
         .name-contain {
             align-self: center;
             position: relative;
             display: inline-block;
-            /* overflow: hidden; */
+            overflow: wrap;
+            /* padding: 10%; */
             width: 100%;
             /* padding: calc(var(--face-size) / 10); */
             background-color: transparent !important;
+            border-radius: 0 0 5% 5%;
         }
 
         .name-in-frame {
+            margin: 5%;
             color: white;
-
             text-align: center;
-            font-size: clamp(5px, 1em, 222px);
+            font-size: clamp(5px, 50%, 222px);
             font-weight: 300;
-            text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem;
+            /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
         }
         .form{
-            font-size: 16pt;
+            font-size: clamp(10px, 1em, 0.05vw);
         }
