@@ -53,6 +53,8 @@
             /* box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset; */
             /* backdrop-filter: brightness(0.5); */
             /* padding: 10%; */
+            display: inline-flex;
+            align-items: center;
             min-width: 50px;
             min-height: 50px;
             max-width: 90vw;
@@ -73,7 +75,7 @@
             border-radius: 5% 5% 0 0;
             min-width: 100%;
             width: var(--face-size);
-            max-width: 90vw;
+            /* max-width: 90vw; */
             height: var(--face-size);
             background-size: cover;
             background-position: center;
