@@ -54,6 +54,7 @@
             /* backdrop-filter: brightness(0.5); */
             /* padding: 10%; */
             display: inline-flex;
+            flex-wrap: wrap;
             align-items: center;
             min-width: 50px;
             min-height: 50px;
