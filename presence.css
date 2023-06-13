@@ -1,111 +1,111 @@
+:root {
+  accent-color: DarkSlateBlue;
+}
+body {
+  --face-size: 100px;
+  font: sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
 
-        :root {
-            accent-color: DarkSlateBlue;
-        }
-        body {
-            --face-size: 100px;
-            font: sans-serif;
-            overflow-x: hidden;
-            user-select: none;
-            font-family: 'Rubik', sans-serif;
-            font-weight: 500;
-        }
+.appSettings {
+  font-size: 30px;
+  line-height: 1em;
+  color: DarkSlateBlue;
+}
 
-        .appSettings {
-          font-size: 30px;
-          line-height: 1em;
-          color: DarkSlateBlue;
-        }
+.headlines {
+  font-size: 30px;
+  line-height: 1em;
+}
 
-        .headlines{
-            font-size: 30px;
-            line-height: 1em;
-        }
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+.kindergartenName {
+  /* display: inline-block; */
+  color: white;
+  background-color: SlateBlue;
+  border-radius: 0.5rem;
+  padding: 0 0.3rem;
+  /* border-spacing: 5rem; */
+  width: fit-content;
+}
 
-        .slider{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .kindergartenName{
-            /* display: inline-block; */
-            color: white;
-            background-color: SlateBlue;
-            border-radius: 0.5rem;
-            padding: 0 0.3rem;
-            /* border-spacing: 5rem; */
-            width: fit-content;
-        }
+#kids-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100vw; */
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex: 1;
+}
 
-        #kids-container {
-            display: flex;
-            flex-wrap: wrap;
-            /* width: 100vw; */
-            justify-content: space-evenly;
-            gap:  1rem;
-            flex: 1;
-        }
-
-        .kid-card-BG {
-            /* position: relative;
+.kid-card-BG {
+  /* position: relative;
             display: flex;
             flex-direction: column; */
-            /* align-content: space-around; */
-            justify-content: center;
-            /* box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset; */
-            /* backdrop-filter: brightness(0.5); */
-            /* padding: 10%; */
-            display: inline-flex;
-            flex-wrap: wrap;
-            align-items: center;
-            min-width: 50px;
-            min-height: 50px;
-            max-width: 90vw;
-            max-height: 90vw;
-            border-radius: 5%;
-            padding: 0.5%;
-            overflow: hidden;
-            background-color: hsla(16, 100%, 40%, 0.7);
-            /* transition: box-shadow 0.3s ease-in-out; */
-            transition: background-color 0.3s ease-in-out;
-        }
-        
-        .kid-card-BG_checked {
-            background-color: hsla(117, 100%, 40%, 0.7);
-            /* box-shadow: 0 0 0 500px hsla(117, 100%, 50%, 0.5) inset; */
-        }
-        
-        .kid-image{
-            border-radius: 5% 5% 0 0;
-            min-width: 100%;
-            width: var(--face-size);
-            /* max-width: 90vw; */
-            height: var(--face-size);
-            background-size: cover;
-            background-position: center;
-            /* background-color: Coral; */
-        }
+  /* align-content: space-around; */
+  justify-content: center;
+  /* box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset; */
+  /* backdrop-filter: brightness(0.5); */
+  /* padding: 10%; */
+  display: inline-flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 90vw;
+  max-height: 90vw;
+  border-radius: 5%;
+  padding: 0.5%;
+  overflow: hidden;
+  background-color: hsla(16, 100%, 40%, 0.7);
+  /* transition: box-shadow 0.3s ease-in-out; */
+  transition: background-color 0.3s ease-in-out;
+}
 
-        .name-contain {
-            align-self: center;
-            position: relative;
-            display: inline-block;
-            overflow: wrap;
-            /* padding: 10%; */
-            width: 100%;
-            /* padding: calc(var(--face-size) / 10); */
-            background-color: transparent !important;
-            border-radius: 0 0 5% 5%;
-        }
+.kid-card-BG_checked {
+  background-color: hsla(117, 100%, 40%, 0.7);
+  /* box-shadow: 0 0 0 500px hsla(117, 100%, 50%, 0.5) inset; */
+}
 
-        .name-in-frame {
-            margin-top: 2%;
-            margin-bottom: 0;
-            color: white;
-            text-align: center;
-            font-size: clamp(5px, 50%, 222px);
-            font-weight: 300;
-            /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
-        }
-        .form{
-            font-size: clamp(10px, 1em, 0.05vw);
-        }
+.kid-image {
+  border-radius: 5% 5% 0 0;
+  min-width: 100%;
+  width: var(--face-size);
+  /* max-width: 90vw; */
+  height: var(--face-size);
+  background-size: cover;
+  background-position: center;
+  /* background-color: Coral; */
+}
+
+.name-contain {
+  align-self: center;
+  position: relative;
+  display: inline;
+  overflow: wrap;
+  /* padding: 10%; */
+  width: 100%;
+  /* padding: calc(var(--face-size) / 10); */
+  background-color: transparent !important;
+  border-radius: 0 0 5% 5%;
+}
+
+.name-in-frame {
+  margin-top: 2%;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  font-size: clamp(5px, 50%, 222px);
+  font-weight: 300;
+  /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
+}
+.form {
+  font-size: clamp(10px, 1em, 0.05vw);
+}
