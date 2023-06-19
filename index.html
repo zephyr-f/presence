@@ -37,6 +37,15 @@
 </head>
 
 <body dir="auto">
+    <!-- navbar from https://codepen.io/GavinMichael/pen/zZejxX -->
+    <div class="navBar" id="mainNavBar">
+        <a href="#top">ראשי</a>
+        <a href="#settings">הגדרות</a>
+        <a href="#contact">יצירת קשר</a>
+        <a href="#about">אודות</a>
+        <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+        <!--&#9776 code for the 3 line menu button-->
+    </div>
 
     <div class="headlines">
         <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
@@ -57,10 +66,10 @@
             </div>
         </div>
     </div>
-    <form action="https://formspree.io/f/xbjwnqao" method="post" class="form">
-        <label for="email">עדכנו אותי כשיוצאת גרסה חדשה<br>בכתובת דוא"ל:</label>
-        <input name="Email" id="email" type="email">
-        <button type="submit">שליחה</button>
+    <form action="https://hook.eu1.make.com/orw7rlxa96tuysrkrw42w6djjfq3ngyh" method="post" class="form">
+        <input name="Email" placeholder='כתובת דוא"ל' id="email" type="email">
+        <input name="message" placeholder="כאן ניתן לרשום הודעה" id="message" type="message">
+        <button type="submit" class="submit">שליחה</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="presence.js"></script>
