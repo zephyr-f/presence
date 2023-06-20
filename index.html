@@ -2,70 +2,93 @@
 <html lang="he">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/playtime.png" type="image/x-icon">
-    <link rel="stylesheet" href="presence.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/playtime.png" type="image/x-icon" />
+    <link rel="stylesheet" href="presence.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
     </style>
 
     <!-- HTML Meta Tags -->
     <title>נוכחות - הגעת תלמידים</title>
-    <meta name="description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן">
+    <meta name="description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן" />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://zephyr-f.github.io/presence/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="נוכחות - הגעת ילדים לגן">
-    <meta property="og:description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן">
+    <meta property="og:url" content="https://zephyr-f.github.io/presence/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="נוכחות - הגעת ילדים לגן" />
+    <meta property="og:description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן" />
     <meta property="og:image"
-        content="https://img.freepik.com/free-photo/medium-shot-kids-sitting-together-table_23-2149355251.jpg">
+        content="https://img.freepik.com/free-photo/medium-shot-kids-sitting-together-table_23-2149355251.jpg" />
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="zephyr-f.github.io">
-    <meta property="twitter:url" content="https://zephyr-f.github.io/presence/">
-    <meta name="twitter:title" content="נוכחות - הגעת ילדים לגן">
-    <meta name="twitter:description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="zephyr-f.github.io" />
+    <meta property="twitter:url" content="https://zephyr-f.github.io/presence/" />
+    <meta name="twitter:title" content="נוכחות - הגעת ילדים לגן" />
+    <meta name="twitter:description" content="מעקב הגעת ילדים לגן חמניה, כדי לוודא שכולם הגיעו, ולספק התראות בזמן" />
     <meta name="twitter:image"
-        content="https://img.freepik.com/free-photo/medium-shot-kids-sitting-together-table_23-2149355251.jpg">
+        content="https://img.freepik.com/free-photo/medium-shot-kids-sitting-together-table_23-2149355251.jpg" />
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
 </head>
 
 <body dir="auto">
-
     <div class="headlines">
         <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
     </div>
-    <div id="kids-container">
-    </div>
+    <div id="kids-container"></div>
     <div class="appSettings">
         <div class="slider">
             <div>
                 <input type="range" id="sliderImages" min="50" max="400" value="100" step="25"
-                    oninput="scaleImage(this.value)">
+                    oninput="scaleImage(this.value)" />
                 <label for="sliderImages">הגדלת&nbsp;תמונות</label>
             </div>
             <div>
                 <input type="range" id="sliderText" min="0.5" max="5" value="1" step="0.5"
-                    oninput="scaleText(this.value)">
+                    oninput="scaleText(this.value)" />
                 <label for="sliderText">הגדלת&nbsp;כתב</label>
             </div>
         </div>
     </div>
-    <form action="https://formspree.io/f/xbjwnqao" method="post" class="form">
-        <label for="email">עדכנו אותי כשיוצאת גרסה חדשה<br>בכתובת דוא"ל:</label>
-        <input name="Email" id="email" type="email">
-        <button type="submit">שליחה</button>
+    <form class="form">
+        <input name="Email" placeholder='כתובת דוא"ל' id="email" type="email">
+        <input name="message" placeholder="כאן ניתן לרשום הודעה" id="message" type="message">
+        <button type="submit" class="submit">שליחה</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="presence.js"></script>
-    <!-- <script src="circularText.js"></script> -->
+    <script>
+        const form = document.querySelector(".form");
+        const emailInput = document.querySelector("#email");
+        const messageInput = document.querySelector("#message");
 
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // prevent default form submission behavior
+
+            const formData = new FormData(); // create a new FormData object
+            formData.append("Email", emailInput.value); // add email input value to the form data
+            formData.append("message", messageInput.value); // add message input value to the form data
+
+            axios
+                .post(
+                    "https://hook.eu1.make.com/orw7rlxa96tuysrkrw42w6djjfq3ngyh",
+                    formData
+                )
+                .then((response) => {
+                    // display success message on the page
+                    const successMessage = document.createElement("p");
+                    successMessage.textContent = "תודה על התענינותך. הטופס נשלח בהצלחה. אענה בהקדם";
+                    form.appendChild(successMessage);
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        });
+    </script>
 </body>
 
 </html>
