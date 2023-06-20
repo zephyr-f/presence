@@ -91,7 +91,7 @@ body {
   align-self: center;
   position: relative;
   display: inline;
-  overflow: wrap;
+  overflow: hidden;
   /* padding: 10%; */
   width: 100%;
   /* padding: calc(var(--face-size) / 10); */
@@ -100,12 +100,11 @@ body {
 }
 
 .name-in-frame {
-  display: inline;
   margin-top: 2%;
   margin-bottom: 0;
   color: white;
   text-align: center;
-  font-size: clamp(5px, 50%, 222px);
+  font-size: clamp(5px, 50%, var(--face-size)*0.2);
   font-weight: 300;
   /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
 }
