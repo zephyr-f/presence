@@ -1,6 +1,7 @@
 :root {
   accent-color: DarkSlateBlue;
 }
+
 body {
   --face-size: 100px;
   font: sans-serif;
@@ -25,6 +26,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
 .kindergartenName {
   /* display: inline-block; */
   color: white;
@@ -98,6 +100,7 @@ body {
 }
 
 .name-in-frame {
+  display: inline;
   margin-top: 2%;
   margin-bottom: 0;
   color: white;
@@ -106,6 +109,7 @@ body {
   font-weight: 300;
   /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
 }
+
 .form {
   font-size: clamp(10px, 1em, 0.05vw);
 }
