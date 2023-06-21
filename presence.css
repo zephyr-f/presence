@@ -39,6 +39,7 @@ body {
   padding: 0 0.3rem;
   /* border-spacing: 5rem; */
   width: fit-content;
+  white-space: nowrap;
 }
 
 #kids-container {
