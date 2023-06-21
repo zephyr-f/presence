@@ -35,27 +35,37 @@
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 </head>
 
-<body dir="auto">
-    <div class="headlines">
-        <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
-    </div>
+<body dir="rtl">
 
-    <div class="appSettings">
-        <div class="slider">
-            <div>
-                <input type="range" id="sliderImages" min="50" max="400" value="100" step="25"
-                    oninput="scaleImage(this.value)" />
-                <label for="sliderImages">הגדלת&nbsp;תמונות</label>
-            </div>
-            <div>
-                <input type="range" id="sliderText" min="0.5" max="5" value="1" step="0.5"
-                    oninput="scaleText(this.value)" />
-                <label for="sliderText">הגדלת&nbsp;כתב</label>
+    <div class="wrap-collabsible"> <input id="collapsible" class="toggle" type="checkbox" checked> <label
+            for="collapsible" class="lbl-toggle">הגדרות</label>
+        <div class="collapsible-content">
+            <div class="content-inner">
+
+                <div class="headlines">
+                    <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
+                </div>
+
+                <div class="appSettings">
+                    <div class="slider">
+                        <div>
+                            <input type="range" id="sliderImages" min="50" max="400" value="100" step="25"
+                                oninput="scaleImage(this.value)" />
+                            <label for="sliderImages">הגדלת&nbsp;תמונות</label>
+                        </div>
+                        <div>
+                            <input type="range" id="sliderText" min="0.5" max="5" value="1" step="0.5"
+                                oninput="scaleText(this.value)" />
+                            <label for="sliderText">הגדלת&nbsp;כתב</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div id="kids-container"></div>
-    <div class="contactContain">
+
+    <div class="contact">
         <p>יצירת קשר</p>
         <form class="form">
             <input name="Email" placeholder='כתובת דוא"ל' id="email" type="email">

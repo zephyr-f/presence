@@ -1,3 +1,5 @@
+@import "form.css";
+
 :root {
   accent-color: DarkSlateBlue;
 }
@@ -107,8 +109,4 @@ body {
   font-size: clamp(5px, 50%, var(--face-size)*0.2);
   font-weight: 300;
   /* text-shadow:rgba(0, 0, 0, 0.3) 0 0 0.4rem; */
-}
-
-.form {
-  font-size: clamp(10px, 1em, 0.05vw);
 }
