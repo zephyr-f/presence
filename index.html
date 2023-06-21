@@ -39,7 +39,7 @@
     <div class="headlines">
         <p> סימון נוכחות <span class="kindergartenName"> גן לדוגמא </span></p>
     </div>
-    <div id="kids-container"></div>
+
     <div class="appSettings">
         <div class="slider">
             <div>
@@ -53,14 +53,16 @@
                 <label for="sliderText">הגדלת&nbsp;כתב</label>
             </div>
         </div>
-    <div>
-<p>יצירת קשר</p>
-    <form class="form">
-        <input name="Email" placeholder='כתובת דוא"ל' id="email" type="email">
-        <input name="message" placeholder="כאן ניתן לרשום הודעה" id="message" type="message">
-        <button type="submit" class="submit">שליחה</button>
-    </form>
-</div>
+    </div>
+    <div id="kids-container"></div>
+    <div class="contactContain">
+        <p>יצירת קשר</p>
+        <form class="form">
+            <input name="Email" placeholder='כתובת דוא"ל' id="email" type="email">
+            <input name="message" placeholder="כאן ניתן לרשום הודעה" id="message" type="message">
+            <button type="submit" class="submit">שליחה</button>
+        </form>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="presence.js"></script>
     <script>
@@ -70,11 +72,9 @@
 
         form.addEventListener("submit", (event) => {
             event.preventDefault(); // prevent default form submission behavior
-
             const formData = new FormData(); // create a new FormData object
             formData.append("Email", emailInput.value); // add email input value to the form data
-            formData.append("message", messageInput.value); // add message input value to the form data
-
+            formData.append("message", messageInput.value); addlue to the form data
             axios
                 .post(
                     "https://hook.eu1.make.com/orw7rlxa96tuysrkrw42w6djjfq3ngyh",
