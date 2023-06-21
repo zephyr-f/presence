@@ -1,4 +1,4 @@
-// console.log('presence.js works! :)');
+console.log('presence.js connected');
 
 // const sliderImages = document.getElementById('sliderImages');
 // const faceSize = document.documentElement
