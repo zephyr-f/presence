@@ -540,8 +540,9 @@ function kidTouch(kidCard) {
 scaleImage = sliderInput => {
   document.body.style.setProperty('--face-size', sliderInput + 'px');
 };
+const kidsContainer = document.querySelector('#kids-container');
 let scaleText = sliderInput => {
-  document.body.style.setProperty('font-size', sliderInput * 90 + '%');
+  kidsContainer.style.setProperty('font-size', sliderInput * 90 + '%');
   // document.body.style.setProperty('line-height', 1 - 0.05 * sliderInput + 'em');
   // document
   //   .getElementsByClassName('kid-card-BG')
