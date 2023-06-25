@@ -21,6 +21,10 @@ form.addEventListener('submit', event => {
       form.appendChild(successMessage);
     })
     .catch(error => {
+      // display error message on the page
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = 'אופס! משהו השתבש. אנא נסה שוב מאוחר יותר';
+      form.appendChild(errorMessage);
       console.error(error);
     });
 });
