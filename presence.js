@@ -549,3 +549,17 @@ let scaleText = sliderInput => {
   //   .style.setProperty('font-size', sliderInput + 'em');
 };
 scaleText(1);
+
+function refreshKidsData() {
+  // Make a GET request to fetch the latest data for the kids
+  axios
+    .get('https://hook.eu1.make.com/jza9afsfk5umu2ruk5nkmsk61uo4qmtj')
+    .then(response => {
+      if (response.statuscode == 200) {
+        getGroupStatus();
+      } // ...
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
