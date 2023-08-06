@@ -555,8 +555,9 @@ function refreshKidsData() {
   axios
     .get('https://hook.eu1.make.com/jza9afsfk5umu2ruk5nkmsk61uo4qmtj')
     .then(response => {
-      if (response.statuscode == 200) {
-        getGroupStatus();
+      if (response.status == 200) {
+        console.log('statuscode = 200 😌');
+        location.reload(true);
       } // ...
     })
     .catch(error => {
